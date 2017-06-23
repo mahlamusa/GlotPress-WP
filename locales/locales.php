@@ -18,7 +18,7 @@ class GP_Locale {
 	public $facebook_locale = null;
 	public $variant_root = null;
 	public $variants = null;
-	
+
 	// TODO: days, months, decimals, quotes
 
 	private $_index_for_number;
