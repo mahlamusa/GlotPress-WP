@@ -1691,8 +1691,6 @@ class GP_Locales {
 		$pt_br->plural_expression = '(n > 1)';
 		$pt_br->google_code = 'pt-BR';
 		$pt_br->facebook_locale = 'pt_BR';
-		$pt_br->variant_root = $pt->slug;
-		$pt->variants[ $pt_br->slug ] = $pt_br->english_name;
 
 		$ps = new GP_Locale();
 		$ps->english_name = 'Pashto';
