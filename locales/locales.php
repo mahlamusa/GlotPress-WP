@@ -1010,8 +1010,6 @@ class GP_Locales {
 		$gsw->country_code = 'ch';
 		$gsw->wp_locale = 'gsw';
 		$gsw->slug = 'gsw';
-		$gsw->variant_root = $de->slug;
-		$de->variants[ $gsw->slug ] = $gsw->english_name;
 
 		$gu = new GP_Locale();
 		$gu->english_name = 'Gujarati';
