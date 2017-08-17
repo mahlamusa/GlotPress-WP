@@ -2299,7 +2299,18 @@ class GP_Locales {
 		$zh_tw->variant_root = $zh->slug;
 		$zh->variants[ $zh_tw->slug ] = $zh_tw->english_name;
 
-		foreach( get_defined_vars() as $locale ) {
+		$def_vars = get_defined_vars();
+		
+		/**
+		 * Fires after the locales have been defined but before they have been assigned to the object property.
+		 *
+		 * @since 3.0.0
+		 *
+		 * @param array $def_vars The array of locale objects.
+		 */
+		$def_vars = do_filter( 'gp_locale_definitions_arrary', $def_vars );
+		
+		foreach( $def_vars as $locale ) {
 			$this->locales[ $locale->slug ] = $locale;
 		}
 	}
